@@ -20,7 +20,6 @@ let fetchUrl = async (url) => {
 
 
 const fetchSocial = async () => {
-    let results = [];
     return Promise.all(
         urls.map(async url => {
             return await fetchUrl(url);
@@ -31,8 +30,7 @@ const fetchSocial = async () => {
 
 app.get("/", (req, res) => {
     fetchSocial().then((result) => {
-        res.send(result);
-        console.log(result);
+        res.send(JSON.stringify(result));
     }).catch((error) => {
         res.send({}, { ":status": 404 });
     });
