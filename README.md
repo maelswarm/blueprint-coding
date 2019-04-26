@@ -31,3 +31,10 @@ A fetch per request basis is NOT correct. If we have thousands of clients hittin
 and forth. Some method of caching must be utilyzed for a sitution like this. Espiecially when bunk data or no data all is returned. Traffic sensitive/dependent time intervals should be used for refreashing the data cache.
 
 Furthermore, depending on the project scale, the cluster module should be used. And then load balancing, proxies, etc.
+
+
+## Links
+
+https://github.com/roecrew
+
+Resume is in this repo.
