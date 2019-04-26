@@ -28,6 +28,6 @@ Everything else is fairly straight forward.
 When a client makes a request to the server, it fetches the resources from the given links. I already was using Promise.all, so for consistency that is why I choose axios.
 
 A fetch per request basis is NOT correct. If we have thousands of clients hitting this endpoint that's a ton of requests back
-and forth. Some method of caching most by utilyzed for a sitution like this. Espiecially when bunk data or no data all is returned. Traffic sensitive/dependent time intervals should be used for refreashing the data cache.
+and forth. Some method of caching must be utilyzed for a sitution like this. Espiecially when bunk data or no data all is returned. Traffic sensitive/dependent time intervals should be used for refreashing the data cache.
 
 Furthermore, depending on the project scale, the cluster module should be used. And then load balancing, proxies, etc.
